@@ -1,0 +1,36 @@
+.containter {
+  width: 350px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+input[type="text"]{
+  height: 100px;
+  width: 100%;
+  border: none;
+  background-color: #202020;
+  color: white;
+  font-size: 100px;
+
+
+}
+input[type="button"]{
+  font-size: 50px;
+  border: none;
+  margin: 0;
+  box-shadow: 0 0 15px 0 black;
+}
+
+.row {
+  display: flex;
+
+}
+
+.row > * {
+  flex: 1;
+}
+
+.arange {
+  background-color: #f78c2b;
+  color: white;
+}
