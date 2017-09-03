@@ -1,0 +1,26 @@
+a {
+  color:red;
+  text-decoration: none;
+}
+
+h1 {
+  display: block;
+}
+
+ul,li {
+  padding: 0 0;
+  margin: 0 0;
+  display: inline-block;
+}
+
+.casa-alquiler {
+  background-color: lightgray;
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 15px;
+  width: 30%;
+
+}
+#menu-principal {
+  background-color: lightblue;
+}
