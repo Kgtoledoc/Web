@@ -30,6 +30,23 @@ function calculateFoodOrder(numAnimals, avgFood) {
  * @return a string containing the name of the most popular day of the week if there is only one most popular day, and an array of the strings containing the names of the most popular days if there are more than one that are most popular
  */
 function mostPopularDays(week) {
+  var max = 0;
+  var array = [];
+  if (week === null ||week.length === 0 ){
+      return null;
+  }
+  else {
+      for(var i = 0; i < week.length ; i++){
+          if(week[i].traffic >= max){
+              max = week[i].traffic;
+          }
+          if(week[i].traffic == max){
+              array.push(week[i].name);
+          }
+
+
+      }
+      return array;
 
 }
 
@@ -47,6 +64,11 @@ function mostPopularDays(week) {
  */
 function createAnimalObjects(names, types, breeds) {
     // IMPLEMENT THIS FUNCTION!
+    var array1 = [];
+    if(names.length === types.length && names.length === breeds.length ){}else {
+      return array1;
+    }
+    
 }
 
 /////////////////////////////////////////////////////////////////
