@@ -32,21 +32,31 @@ function calculateFoodOrder(numAnimals, avgFood) {
 function mostPopularDays(week) {
   var max = 0;
   var array = [];
+  var count = 0;
+  var maxday;
   if (week === null ||week.length === 0 ){
       return null;
   }
-  else {
-      for(var i = 0; i < week.length ; i++){
-          if(week[i].traffic >= max){
-              max = week[i].traffic;
-          }
-          if(week[i].traffic == max){
-              array.push(week[i].name);
-          }
+  for(var i = 0; i < week.length ; i++){
+    if(week[i].traffic >= max){
+    max = week[i].traffic;
+  }}
+  for(var i = 0; i < week.length; i++){
+    if(week[i].traffic == max){
+      count++;
+      array.push(week[i].name);
 
 
-      }
-      return array;
+    }
+  }
+  if(count ===1){
+    maxday = array[0];
+    return maxday;
+  }
+  else{
+    return array;
+  }
+
 
 }
 
@@ -64,11 +74,27 @@ function mostPopularDays(week) {
  */
 function createAnimalObjects(names, types, breeds) {
     // IMPLEMENT THIS FUNCTION!
+    var arrayEmpty = [];
     var array1 = [];
-    if(names.length === types.length && names.length === breeds.length ){}else {
-      return array1;
+    if(names === null || types === null || breeds === null){
+      return arrayEmpty;
     }
-    
+    if(names.length == 0 || types.length == 0 || breeds.length == 0){
+      return arrayEmpty;
+    }
+    if(names.length !== types.length || names.length !== breeds.length ){
+      return arrayEmpty;
+
+    }
+
+    for (var i=0;i < names.length; i++){
+      array1.push(new Animal(names[i], types[i], breeds[i]));
+    }
+    return array1;
+
+
+
+
 }
 
 /////////////////////////////////////////////////////////////////
