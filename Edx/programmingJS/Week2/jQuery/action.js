@@ -104,3 +104,30 @@ $('input:checkbox').change(function(){
   }
   }
 });
+
+
+//Password function
+
+$("button[name='submit']").click(function(){
+  var passwordField = $("input[name='password']");
+  var password = passwordField.val();
+  var isOkay = true;
+  if(password.length <10){
+    isOkay = false;
+    $('#needsNumber').show();
+  }
+  if(/\d/.test(password) == false){
+    isOkay = false;
+    $('#needsNumber').show();
+  }
+  if(isOkay == false){
+    $('#successMessage').hide();
+    $('#errorMessage').show();
+  }
+  else {
+    $('.errorText').hide();
+    $('#successMessage').show();
+    passwordField.removeClass("errorBox").addClass("goodBoox");
+  }
+  return false;
+})

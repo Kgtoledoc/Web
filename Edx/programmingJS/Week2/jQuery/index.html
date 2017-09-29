@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script src="jquery-3.2.1.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Page with jquery-3</title>
   </head>
   <body>
@@ -50,6 +51,21 @@
     <p>
       I'd like to buy a new <span id="featuresSpan"></span><span id="genderSpan"></span><span id="speciesSpan">animal</span>
     </p>
+
+
+    <!-- Passwords -->
+
+    <input type="password" name="password" value=""></input>
+    <br>
+    <span id="errorMessage" class="errorText" hidden>Please fix the following errors:</span>
+    <ul>
+      <li id="needsNumber" class="errorText" hidden>The password must contain a number</li>
+      <li id="atLeast10Chars" class="errorText" hidden>The password must be at least 10 characters long</li>
+    </ul>
+
+    <span id="successMessage" hidden>The passwords is okay!</span>
+    <p></p>
+    <button type="button" name="submit">Password</button>
 
 
 
