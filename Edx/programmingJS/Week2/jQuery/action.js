@@ -102,6 +102,7 @@ $('input:checkbox').change(function(){
       $('#featureSpan').append(' ');
     }
   }
+  
   }
 });
 
