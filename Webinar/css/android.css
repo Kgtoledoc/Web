@@ -56,3 +56,28 @@ body {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+#header ul.hide {
+  display: none;
+}
+
+#header div.leftButton {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: rgba(0,0,0,0.6) 0px -1px 1px;
+  line-height: 28px;
+  border-width: 0 8px 0 8px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background: #4FBBDA;
+}
+
+
+#header div.pressed {
+  background:#09576D;
+}
